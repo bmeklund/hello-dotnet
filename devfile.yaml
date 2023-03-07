@@ -13,6 +13,10 @@ starterProjects:
         origin: https://github.com/bmeklund/hello-dotnet.git
     subDir: app
 components:
+  - name: dev-tools
+    container: 
+      image: registry.redhat.io/devspaces/udi-rhel8@sha256:8de469cc9131a42092bd66e0f27a52bbc9b9a449235abf5b900d172a1bd3c985
+      args: ["tail", "-f", "/dev/null"]
   - name: dotnet
     container:
       image: registry.access.redhat.com/ubi8/dotnet-31:3.1
